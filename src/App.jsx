@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Hero from './component/Hero'
-import Navbar from './component/NavBar'
+import Navbar from './component/Navbar'
 import Featured from './component/Featured'
 import Contact from './pages/Contact'
 import Home from './pages/Home'
