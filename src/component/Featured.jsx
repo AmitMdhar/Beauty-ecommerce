@@ -32,6 +32,10 @@ function Featured() {
 
   // most used hook in react
   const [showAll, setShowAll] = useState(false);
+   // show 4 or all
+  const visibleProducts = showAll
+    ? cosmetic
+    : cosmetic.slice(0, 4);
   return (
     <div>
 
@@ -69,10 +73,10 @@ function Featured() {
       </div>
 
       {/* products section */}
-        <div className='flex flex-wrap gap-10 mt-6 justify-items-center'>
+        <div className='flex  gap-10 mt-6 justify-center items-center'>
          {showAll ?(
-          <div className='flex gap-10 '>
-            {cosmetic.map((item)=>(
+          <div className='flex gap-10 mt-6 flex-wrap justify-center '>
+            {visibleProducts.map((item)=>(
               <div key={item.id} className='relative'>
               <img src={item.image} alt="item.name" className='w-72 h-80' />
               <p className='mt-2'>{item.name}</p>
@@ -85,8 +89,8 @@ function Featured() {
             ))}
           </div>
          ):(
-          <div className='flex flex-wrap justify-between gap-10 mt-6 border-2 '>
-            {cosmetic.map((item)=>(
+          <div className='flex flex-wrap justify-center gap-10 mt-6  '>
+            {visibleProducts.map((item)=>(
               <div key={item.id} className='relative'>
               <img src={item.image} alt="item.name" className='w-72 h-80' />
               <p className='mt-2'>{item.name}</p>

@@ -5,7 +5,7 @@ function Navbar ()  {
     <div className='flex justify-between  py-4 text-[15px] items-center'>
         <img src={Logo} alt="Logo" className='h-10 w-10  '/>
         <div className='flex gap-40 '>
-        <div className=''>Home</div>
+        <div className=' '>Home</div>
         <div className=' '>About</div>
         <div className=' '>Contact</div>
         <div className=''>Services</div>
